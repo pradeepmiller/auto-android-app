@@ -27,4 +27,8 @@ public class AutomationIdLocatorsForAndroid {
         public static final String BUTTON_CLOSE = "button_close";
     }
 
+    public static class MenuScreen {
+        public static final String MENU_SCREEN_ICON_PROFILE = "menu_screen_icon_profile";
+    }
+
 }
