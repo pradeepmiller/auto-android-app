@@ -1,0 +1,36 @@
+name: Convert AutomationsIds.kt to AutomationIdLocatorsAndroid.java
+
+on:
+  push:
+    branches:
+      - loc_15_Jul_2025
+    paths:
+      - src/app/src/main/java/com/sampleapp/utils/AutomationsIds.kt
+
+permissions:
+  contents: write
+
+jobs:
+  convert-kotlin-to-java:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Run conversion script
+        run: |
+          python3 scripts/kt_to_java_converter.py \
+            src/app/src/main/java/com/sampleapp/utils/AutomationsIds.kt \
+            src/app/src/main/java/com/sampleapp/utils/AutomationIdLocatorsAndroid.java
+
+      - name: Commit and push converted file
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Convert AutomationsIds.kt to AutomationIdLocatorsAndroid.java using Python script"
+          file_pattern: src/app/src/main/java/com/sampleapp/utils/AutomationIdLocatorsAndroid.java
