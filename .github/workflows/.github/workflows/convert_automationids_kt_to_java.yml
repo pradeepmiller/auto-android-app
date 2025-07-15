@@ -5,7 +5,7 @@ on:
     branches:
       - loc_15_Jul_2025
     paths:
-      - src/app/src/main/java/com/sampleapp/utils/AutomationsIds.kt
+      - '**/AutomationsIds.kt'
 
 permissions:
   contents: write
@@ -26,7 +26,7 @@ jobs:
       - name: Run conversion script
         run: |
           python3 scripts/kt_to_java_converter.py \
-            src/app/src/main/java/com/sampleapp/utils/AutomationsIds.kt \
+            src/app/src/main/java/com/sampleapp/utils/ \
             src/app/src/main/java/com/sampleapp/utils/AutomationIdLocatorsAndroid.java
 
       - name: Commit and push converted file
