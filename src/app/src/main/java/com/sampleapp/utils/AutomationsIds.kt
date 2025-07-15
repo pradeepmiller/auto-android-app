@@ -21,5 +21,6 @@ object AutomationsIds {
     object HomeScreen {
         const val HOME_SCREEN_TEXT_HEADER = "home_screen_text_header"
         const val HOME_SCREEN_TEXT_DESCRIPTION = "home_screen_text_description"
+        const val HOME_SCREEN_BUTTON_MENU = "home_screen_button_menu"
     }
 }
