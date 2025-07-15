@@ -3,7 +3,7 @@ name: Convert AutomationsIds.kt to AutomationIdLocatorsAndroid.java
 on:
   push:
     branches:
-      - loc_15_Jul_2025
+      - local_15_Jul_2025
     paths:
       - '**/AutomationsIds.kt'
 
