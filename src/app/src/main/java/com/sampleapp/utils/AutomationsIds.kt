@@ -17,4 +17,8 @@ object AutomationsIds {
             const val LOGIN_SCREEN_INPUT_PASSWORD = "login_screen_input_password"
             const val LOGIN_SCREEN_BUTTON_SUBMIT = "login_screen_button_submit"
     }
+
+    object HomeScreen {
+            const val HOME_SCREEN_TEXT_HEADER = "home_screen_text_header"
+    }
 }
