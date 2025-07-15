@@ -1,0 +1,19 @@
+name: Notify Merge Repo on Java File Change
+
+on:
+  push:
+    paths:
+      - 'src/app/src/main/java/com/sampleapp/utils/AutomationIdLocatorsAndroid.java' # update for iOS repo
+      - 'src/Sample_App/Sample_App/Presentation/AutomationIdLocatorsIos.java'        # update for Android repo
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger merge repo workflow
+        run: |
+          curl -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${{ secrets.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 }}" \
+            https://api.github.com/repos/pradeepmiller/auto-test-app/dispatches \
+            -d '{"event_type":"merge_java_locators"}'
