@@ -23,4 +23,9 @@ object AutomationsIds {
         const val HOME_SCREEN_TEXT_DESCRIPTION = "home_screen_text_description"
         const val HOME_SCREEN_BUTTON_MENU = "home_screen_button_menu"
     }
+
+    object Common {
+        const val BUTTON_BACK = "button_back"
+        const val BUTTON_CLOSE = "button_close"
+    }
 }
